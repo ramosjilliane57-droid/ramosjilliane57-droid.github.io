@@ -70,7 +70,7 @@ nav a:hover {
 
 .product-container {
     display: flex;
-    justify-content: center;
+    justify-content: space between;
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 30px;
@@ -109,3 +109,4 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
