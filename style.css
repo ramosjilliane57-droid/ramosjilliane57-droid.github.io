@@ -1,0 +1,170 @@
+/* style.css - Luxury Beauty Edition */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --bg-silk: #F9F6F2;        /* Soft off-white */
+    --accent-gold: #B5945F;    /* Muted Champagne Gold */
+    --deep-charcoal: #1A1A1A;  /* Rich black/grey */
+    --border-tan: #E5DED5;     /* Delicate borders */
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-silk);
+    color: var(--deep-charcoal);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury Typography */
+h1, h2, h3, .logo {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* Navigation - Balanced & Spaced */
+nav {
+    display: flex;
+    justify-content: space-between; /* Pushes Logo to left, Links to right */
+    align-items: center;
+    padding: 25px 8%; /* Top/Bottom and Left/Right padding */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-tan);
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 8px;
+    flex: 1; /* Allows logo space to grow naturally */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Ensures links stay on the right */
+    flex: 2; /* Gives more room for the links to spread out */
+}
+
+nav ul li {
+    /* This gives equal breathing room to "Home", "Shop", etc. */
+    margin-left: 40px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--deep-charcoal);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 0; /* Creates a larger clickable area without moving the text */
+    transition: color 0.4s ease;
+    display: inline-block;
+}
+
+/* Premium Buttons */
+.btn {
+    position: relative;
+    padding: 16px 40px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: 1px solid var(--deep-charcoal);
+    background: transparent;
+    color: var(--deep-charcoal);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--deep-charcoal);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.6s ease;
+    border: 1px solid transparent;
+    padding: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--border-tan);
+    background: var(--white);
+}
+
+.product-img-container {
+    height: 450px;
+    background-color: #EFEDE9; /* High-end neutral background for photos */
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply; /* Makes product shadows look professional */
+}
+
+/* Contact Form - Refined */
+input, textarea, select {
+    font-family: 'Montserrat', sans-serif;
+    border: none !important;
+    border-bottom: 1px solid var(--border-tan) !important;
+    background: transparent !important;
+    padding: 15px 5px !important;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 13px;
+    color: var(--deep-charcoal);
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 1px solid var(--accent-gold) !important;
+}
+
+/* Section Spacing */
+section {
+    padding: 120px 8%;
+}
+
+footer {
+    padding: 80px 8%;
+    background: var(--white);
+    border-top: 1px solid var(--border-tan);
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.active {
+    border-bottom: 1px solid var(--accent-gold);
+    color: var(--accent-gold) !important;
+}
